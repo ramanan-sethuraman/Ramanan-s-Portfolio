@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramanan S — Full-Stack Developer & IT Undergrad</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #E2E2E2;
+      color: #111827;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .section-box-heading {
+      display: inline-block;
+      border: 3px solid #000000;
+      padding: 0.65rem 2.5rem;
+      font-weight: 800;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      background-color: transparent;
+      color: #000000;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+    }
+    @media (min-width: 768px) {
+      .section-box-heading {
+        padding: 0.85rem 3.5rem;
+        font-size: 1.5rem;
+      }
+    }
+    .section-box-heading:hover {
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+
+    .pipe-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      color: #000000;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .pipe-button:hover {
+      opacity: 0.7;
+      transform: translateY(-1px);
+    }
+    .pipe-button .pipe {
+      font-weight: 300;
+      color: #000000;
+    }
+
+    .l-bracket-input-group {
+      position: relative;
+      margin-bottom: 2.25rem;
+    }
+    .l-bracket-field {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-left: 2px solid #000000;
+      border-bottom: 2px solid #000000;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #000000;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+    .l-bracket-field::placeholder {
+      color: #71717A;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+    }
+    .l-bracket-field:focus {
+      border-left-width: 4px;
+      border-bottom-width: 3px;
+      border-color: #000000;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .embossed-social-btn {
+      width: 2.75rem;
+      height: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #E2E2E2;
+      border: 1px solid #D1D5DB;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12), -2px -2px 5px rgba(255, 255, 255, 0.8);
+      border-radius: 4px;
+      color: #111827;
+      transition: all 0.2s ease;
+    }
+    .embossed-social-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.18), -3px -3px 8px rgba(255, 255, 255, 0.9);
+      color: #000000;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-light-side {
+        clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#E2E2E2] text-black antialiased selection:bg-black selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="absolute top-0 left-0 right-0 z-50 py-6 px-6 sm:px-12 md:px-16">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-1">
+        <div class="w-12 h-12 flex items-center justify-center border-2 border-black bg-black text-white font-extrabold tracking-tighter text-xl">
+          <span class="font-mono text-2xl">RS</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-10">
+        <a href="#about" class="text-white hover:text-neutral-300 font-semibold tracking-wider text-sm uppercase">About me</a>
+        <a href="#skills" class="text-white hover:text-neutral-300 font-semibold tracking-wider text-sm uppercase">Skills</a>
+        <a href="#portfolio" class="text-white hover:text-neutral-300 font-semibold tracking-wider text-sm uppercase">Portfolio</a>
+        <a href="#experience" class="text-white hover:text-neutral-300 font-semibold tracking-wider text-sm uppercase">Experience</a>
+        <a href="#contact" class="bg-white text-black hover:bg-neutral-200 px-7 py-2.5 rounded-full font-bold text-xs tracking-widest uppercase transition-all shadow-md">CONTACT ME</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative w-full min-h-screen bg-[#0A0A0A] overflow-hidden flex flex-col justify-between">
+    <div class="relative w-full min-h-screen flex flex-col lg:flex-row">
+      
+      <!-- Left Side -->
+      <div class="hero-light-side relative w-full lg:w-[58%] bg-[#E2E2E2] z-10 pt-32 pb-20 px-8 sm:px-14 lg:px-20 flex flex-col justify-center min-h-[550px] lg:min-h-screen">
+        <div class="max-w-xl">
+          <p class="text-xl sm:text-2xl font-normal text-neutral-800 tracking-wide mb-2">Hi, I am</p>
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-black tracking-tight leading-none mb-4">Ramanan S</h1>
+          <p class="text-base sm:text-xl font-medium text-neutral-600 tracking-wide mb-12">Full-Stack Developer / IT Undergrad</p>
+
+          <!-- Social Buttons -->
+          <div class="flex items-center space-x-4 mb-8">
+            <a href="mailto:ramanans.master@gmail.com" class="embossed-social-btn font-mono font-bold text-lg">@</a>
+            <a href="https://github.com/ramanan-sethuraman" target="_blank" class="embossed-social-btn"><i data-lucide="github"></i></a>
+            <a href="https://www.linkedin.com/in/ramanan-sethuraman" target="_blank" class="embossed-social-btn font-bold text-sm">in</a>
+          </div>
+
+          <a href="#about" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-neutral-700 hover:text-black">
+            <span>Explore my journey</span>
+            <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Side (Portrait on Black) -->
+      <div class="relative w-full lg:w-[48%] lg:absolute lg:right-0 lg:top-0 lg:bottom-0 bg-[#0A0A0A] flex items-end justify-center lg:justify-end px-6 sm:px-12 lg:pr-20 pt-10 pb-0">
+        <div class="relative w-full max-w-md lg:max-w-lg flex flex-col items-center">
+          <div class="relative w-full aspect-[4/5] max-h-[620px] flex items-end justify-center overflow-hidden">
+            <!-- Subtle studio rim backlight -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_55%,rgba(255,255,255,0.14),transparent_68%)] pointer-events-none"></div>
+
+            <!-- Real Portrait Photo with Edge Rim Lighting -->
+            <img 
+              src="profile-cutout.png" 
+              alt="Ramanan S" 
+              onerror="this.src='profile.jpg';"
+              style="filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.42)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.1)) drop-shadow(0 25px 40px rgba(0, 0, 0, 0.9));"
+              class="relative z-10 w-full h-auto max-h-[600px] object-cover object-top select-none transition-transform duration-500 hover:scale-[1.02]"
+            />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="py-24 px-6 sm:px-12 md:px-16 bg-[#E2E2E2]">
+    <div class="max-w-5xl mx-auto flex flex-col items-center">
+      <div class="mb-14 text-center">
+        <h2 class="section-box-heading">ABOUT ME</h2>
+      </div>
+
+      <div class="max-w-3xl text-center space-y-6 text-neutral-800 text-sm sm:text-base leading-relaxed tracking-wide">
+        <p>My name is Ramanan S, an Information Technology undergraduate at Agni College of Technology, Chennai (2024 – 2028). I have a deep passion for full-stack engineering, interactive web applications, and building technology that solves real-world challenges.</p>
+        <p>Alongside development, I actively participate in hackathons including Smart India Hackathon (SIH 2025), build AI/ML architectures, and study cybersecurity fundamentals. Fluent in English, Tamil, and conversational Japanese, I thrive in collaborative problem-solving environments.</p>
+      </div>
+
+      <!-- | MORE | TOGGLE -->
+      <div class="my-12">
+        <button id="toggleMoreBtn" onclick="toggleMore()" class="pipe-button">
+          <span class="pipe text-xl">|</span>
+          <span id="moreBtnText" class="mx-2 font-bold tracking-widest text-sm">MORE</span>
+          <span class="pipe text-xl">|</span>
+        </button>
+      </div>
+
+      <div id="moreContent" class="hidden w-full max-w-4xl bg-neutral-100 border-2 border-black p-8 sm:p-10 mb-16 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+        <h3 class="text-xl font-extrabold tracking-widest uppercase mb-6">Education & Academic Background</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+          <div class="border-l-2 border-black pl-4">
+            <span class="text-xs font-mono font-bold text-neutral-500 uppercase">2024 – 2028</span>
+            <h4 class="font-bold text-base mt-1">Agni College of Technology, Chennai</h4>
+            <p class="text-sm font-semibold text-neutral-700">B.Tech in Information Technology</p>
+            <p class="text-xs font-bold bg-neutral-200 inline-block px-2 py-0.5 rounded mt-1">CGPA: 7.8 (pursuing)</p>
+          </div>
+          <div class="border-l-2 border-black pl-4">
+            <span class="text-xs font-mono font-bold text-neutral-500 uppercase">2010 – 2024</span>
+            <h4 class="font-bold text-base mt-1">Nirmala Matriculation Hr. Sec. School</h4>
+            <p class="text-sm font-semibold text-neutral-700">Chidambaram</p>
+            <p class="text-xs font-bold bg-neutral-200 inline-block px-2 py-0.5 rounded mt-1">HSC: 70.5% | SSLC: 76.3%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three Pillars -->
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 mt-6">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full border border-neutral-300 flex items-center justify-center bg-neutral-200/50 mb-6">
+            <i data-lucide="palette" class="w-7 h-7 text-black"></i>
+          </div>
+          <h3 class="font-extrabold text-lg tracking-widest uppercase mb-3">DESIGN</h3>
+          <p class="text-xs sm:text-sm text-neutral-700 leading-relaxed max-w-xs">Crafting intuitive user interfaces and wireframes with Figma based on modern visual standards.</p>
+        </div>
+
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full border border-neutral-300 flex items-center justify-center bg-neutral-200/50 mb-6">
+            <i data-lucide="code-2" class="w-7 h-7 text-black"></i>
+          </div>
+          <h3 class="font-extrabold text-lg tracking-widest uppercase mb-3">DEVELOPMENT</h3>
+          <p class="text-xs sm:text-sm text-neutral-700 leading-relaxed max-w-xs">Building scalable, responsive web systems using React, Node.js, Express, MySQL, and Python.</p>
+        </div>
+
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full border border-neutral-300 flex items-center justify-center bg-neutral-200/50 mb-6">
+            <i data-lucide="wrench" class="w-7 h-7 text-black"></i>
+          </div>
+          <h3 class="font-extrabold text-lg tracking-widest uppercase mb-3">MAINTENANCE</h3>
+          <p class="text-xs sm:text-sm text-neutral-700 leading-relaxed max-w-xs">Addressing bugs, optimizing performance, and ensuring software reliability and security posture.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-24 px-6 sm:px-12 md:px-16 bg-[#E2E2E2]">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-16 text-center">
+        <h2 class="section-box-heading">SKILLS</h2>
+      </div>
+
+      <div class="space-y-16">
+        <div>
+          <h3 class="font-extrabold text-sm tracking-widest uppercase mb-8">USING NOW:</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">React.js</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">Frontend</span>
+            </div>
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">JavaScript</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">Core</span>
+            </div>
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">Node.js</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">Backend</span>
+            </div>
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">MySQL</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">Database</span>
+            </div>
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">Python</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">Language</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-extrabold text-sm tracking-widest uppercase mb-8">LEARNING:</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">Cybersecurity</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">Security</span>
+            </div>
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">Machine Learning</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">AI / Data</span>
+            </div>
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">ARCore</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">AR / Spatial</span>
+            </div>
+            <div class="p-5 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]">
+              <span class="font-bold text-xs uppercase tracking-wider">Next.js</span>
+              <span class="text-[10px] text-neutral-500 uppercase mt-1">Framework</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-extrabold text-sm tracking-widest uppercase mb-8">DIFFERENT:</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5">
+            <div class="p-4 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center">
+              <span class="font-bold text-xs uppercase">Figma</span>
+            </div>
+            <div class="p-4 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center">
+              <span class="font-bold text-xs uppercase">Java</span>
+            </div>
+            <div class="p-4 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center">
+              <span class="font-bold text-xs uppercase">Firebase</span>
+            </div>
+            <div class="p-4 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center">
+              <span class="font-bold text-xs uppercase">Photoshop</span>
+            </div>
+            <div class="p-4 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center">
+              <span class="font-bold text-xs uppercase">After Effects</span>
+            </div>
+            <div class="p-4 bg-neutral-200/60 border border-neutral-300 flex flex-col items-center justify-center text-center">
+              <span class="font-bold text-xs uppercase">Canva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="py-24 px-6 sm:px-12 md:px-16 bg-[#E2E2E2]">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-14 text-center">
+        <h2 class="section-box-heading">PORTFOLIO</h2>
+      </div>
+
+      <div class="relative max-w-2xl mx-auto py-12 px-6 flex flex-col items-center text-center bg-neutral-200/40 border border-neutral-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.15)]">
+        <p class="italic text-xs sm:text-sm font-medium tracking-wider text-neutral-600 mb-3">coded, full-stack</p>
+        <h3 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">meetflow.</h3>
+        <p class="text-xs sm:text-sm text-neutral-700 max-w-md mb-8 leading-relaxed">Developed a full-stack meeting management system using MySQL, Node.js, Express.js, and React.</p>
+        
+        <div class="flex items-center space-x-8">
+          <a href="https://github.com/ramanan-sethuraman" target="_blank" class="pipe-button">
+            <span class="pipe text-xl">|</span>
+            <span class="mx-2 font-bold tracking-widest text-xs sm:text-sm">DEMO</span>
+            <span class="pipe text-xl">|</span>
+          </a>
+          <a href="https://github.com/ramanan-sethuraman" target="_blank" class="pipe-button">
+            <span class="pipe text-xl">|</span>
+            <span class="mx-2 font-bold tracking-widest text-xs sm:text-sm">INFO</span>
+            <span class="pipe text-xl">|</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Additional Projects -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+        <div class="p-6 bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+          <span class="italic text-xs text-neutral-500">coded, designed, AR/AI</span>
+          <h4 class="text-xl font-extrabold mt-1 mb-2">Sustainable Farming Platform (SIH 2025)</h4>
+          <p class="text-xs text-neutral-700 mb-4">AR-powered gamified platform to promote sustainable farming built with React, Node.js, Firebase, Python, and ARCore.</p>
+          <a href="https://github.com/ramanan-sethuraman" target="_blank" class="text-xs font-bold uppercase tracking-widest underline">Explore on GitHub →</a>
+        </div>
+
+        <div class="p-6 bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+          <span class="italic text-xs text-neutral-500">coded, designed, product</span>
+          <h4 class="text-xl font-extrabold mt-1 mb-2">Vehicle Leasing & Land Platform (IPD)</h4>
+          <p class="text-xs text-neutral-700 mb-4">Connecting landowners & vehicle owners with GPS tracking, digital contracts, and AI fraud detection.</p>
+          <a href="https://github.com/ramanan-sethuraman" target="_blank" class="text-xs font-bold uppercase tracking-widest underline">Explore on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="py-24 px-6 sm:px-12 md:px-16 bg-[#E2E2E2]">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-16 text-center">
+        <h2 class="section-box-heading">EXPERIENCE</h2>
+      </div>
+
+      <div class="space-y-6 max-w-3xl mx-auto">
+        <div class="p-6 bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-extrabold text-base sm:text-lg">Cybersecurity & Ethical Hacking Intern</h3>
+              <p class="text-xs font-semibold text-neutral-600">Tamizhan Skills (RISE 5.0 Program)</p>
+            </div>
+            <span class="text-xs font-mono font-bold bg-neutral-200 px-2 py-0.5">June 2026 – July 2026</span>
+          </div>
+          <p class="text-xs text-neutral-700 mt-3">Completed hands-on cybersecurity training covering network reconnaissance, vulnerability assessments, and ethical hacking fundamentals.</p>
+        </div>
+
+        <div class="p-6 bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-extrabold text-base sm:text-lg">Full Stack Development Intern</h3>
+              <p class="text-xs font-semibold text-neutral-600">CodeAlpha</p>
+            </div>
+            <span class="text-xs font-mono font-bold bg-neutral-200 px-2 py-0.5">Dec 2025 – Jan 2026</span>
+          </div>
+          <p class="text-xs text-neutral-700 mt-3">Developed full-stack web applications and gained experience in modern web technologies and collaborative workflows.</p>
+        </div>
+
+        <div class="p-6 bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-extrabold text-base sm:text-lg">AI/ML Intern</h3>
+              <p class="text-xs font-semibold text-neutral-600">InternPe</p>
+            </div>
+            <span class="text-xs font-mono font-bold bg-neutral-200 px-2 py-0.5">Jul 2025 – Aug 2025</span>
+          </div>
+          <p class="text-xs text-neutral-700 mt-3">Worked on AI/ML projects involving data analysis and predictive model development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & FOOTER -->
+  <footer id="contact" class="pt-20 pb-12 px-6 sm:px-12 md:px-16 bg-[#E2E2E2]">
+    <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
+      <p class="text-sm font-semibold tracking-wide text-neutral-800 mb-6">And many more to come!</p>
+      <div class="mb-8">
+        <h2 class="section-box-heading">CONTACT</h2>
+      </div>
+
+      <div class="flex items-center justify-center space-x-3 mb-14 text-neutral-800">
+        <span class="w-16 h-[2px] bg-black"></span>
+        <span class="font-mono text-sm tracking-tighter font-extrabold select-none">\\\///</span>
+        <span class="w-16 h-[2px] bg-black"></span>
+      </div>
+
+      <form onsubmit="handleContact(event)" class="w-full max-w-xl text-left mb-12">
+        <div class="l-bracket-input-group">
+          <input type="text" id="name" required placeholder="ENTER YOUR NAME*" class="l-bracket-field" />
+        </div>
+        <div class="l-bracket-input-group">
+          <input type="email" id="email" required placeholder="ENTER YOUR EMAIL*" class="l-bracket-field" />
+        </div>
+        <div class="l-bracket-input-group">
+          <input type="tel" id="phone" placeholder="PHONE NUMBER" class="l-bracket-field" />
+        </div>
+        <div class="l-bracket-input-group">
+          <textarea id="message" required rows="4" placeholder="YOUR MESSAGE*" class="l-bracket-field resize-none"></textarea>
+        </div>
+
+        <div id="contactToast" class="hidden mb-6 p-4 border-2 border-black bg-white text-xs font-bold uppercase tracking-wider">
+          Thank you! Message received.
+        </div>
+
+        <div class="text-center mt-8">
+          <button type="submit" class="pipe-button">
+            <span class="pipe text-2xl">|</span>
+            <span class="mx-4 font-extrabold tracking-[0.25em] text-sm">SUBMIT</span>
+            <span class="pipe text-2xl">|</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="my-10">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex flex-col items-center">
+          <i data-lucide="chevrons-up" class="w-5 h-5 text-black"></i>
+          <span class="font-extrabold text-[11px] tracking-widest uppercase text-black mt-2">BACK TO TOP</span>
+        </button>
+      </div>
+
+      <div class="flex items-center space-x-4 mb-8">
+        <a href="tel:+919080173002" class="w-10 h-10 border-2 border-black bg-white hover:bg-black hover:text-white flex items-center justify-center transition-colors"><i data-lucide="phone" class="w-4 h-4"></i></a>
+        <a href="https://www.linkedin.com/in/ramanan-sethuraman" target="_blank" class="w-10 h-10 border-2 border-black bg-white hover:bg-black hover:text-white flex items-center justify-center transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+        <a href="https://github.com/ramanan-sethuraman" target="_blank" class="w-10 h-10 border-2 border-black bg-white hover:bg-black hover:text-white flex items-center justify-center transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+        <a href="mailto:ramanans.master@gmail.com" class="w-10 h-10 border-2 border-black bg-white hover:bg-black hover:text-white flex items-center justify-center transition-colors"><i data-lucide="mail" class="w-4 h-4"></i></a>
+      </div>
+
+      <p class="text-[11px] font-mono tracking-wider text-neutral-600">@2026 Ramanan S All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function toggleMore() {
+      const content = document.getElementById('moreContent');
+      const text = document.getElementById('moreBtnText');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        text.textContent = 'LESS';
+      } else {
+        content.classList.add('hidden');
+        text.textContent = 'MORE';
+      }
+    }
+
+    function handleContact(e) {
+      e.preventDefault();
+      const toast = document.getElementById('contactToast');
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        e.target.reset();
+      }, 4000);
+    }
+  </script>
+</body>
+</html>

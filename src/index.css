@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #E2E2E2;
+    color: #111827;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Signature Elements matching Tomasz Gajda aesthetic */
+
+/* Section Title Box */
+.section-box-heading {
+  display: inline-block;
+  border: 3px solid #000000;
+  padding: 0.65rem 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #000000;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .section-box-heading {
+    padding: 0.85rem 3.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.section-box-heading:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Action Button with vertical pipes: | TEXT | */
+.pipe-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #000000;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.pipe-button:hover {
+  opacity: 0.7;
+  transform: translateY(-1px);
+}
+
+.pipe-button .pipe {
+  font-weight: 300;
+  color: #000000;
+}
+
+/* L-Bracket Form Inputs (Signature contact style from reference Image 5) */
+.l-bracket-input-group {
+  position: relative;
+  margin-bottom: 2.25rem;
+}
+
+.l-bracket-field {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000000;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.l-bracket-field::placeholder {
+  color: #71717A;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.l-bracket-field:focus {
+  border-left-width: 4px;
+  border-bottom-width: 3px;
+  border-color: #000000;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Embossed 3D Social Buttons (Image 1 reference) */
+.embossed-social-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E2E2E2;
+  border: 1px solid #D1D5DB;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12), -2px -2px 5px rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+.embossed-social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.18), -3px -3px 8px rgba(255, 255, 255, 0.9);
+  color: #000000;
+}
+
+/* Hero Section Split Layout with Angled Divider */
+.hero-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .hero-light-side {
+    position: relative;
+    width: 58%;
+    background-color: #E2E2E2;
+    z-index: 10;
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+  }
+
+  .hero-dark-side {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48%;
+    height: 100%;
+    background-color: #0A0A0A;
+    z-index: 5;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #E2E2E2;
+}
+::-webkit-scrollbar-thumb {
+  background: #71717A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
