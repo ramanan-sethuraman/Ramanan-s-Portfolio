@@ -85,12 +85,12 @@ export default function Hero() {
         </div>
 
         {/* Right Side (Deep Black with Portrait) */}
-        <div className="relative w-full lg:w-[48%] lg:absolute lg:right-0 lg:top-0 lg:bottom-0 bg-[#0A0A0A] flex items-end justify-center lg:justify-end px-6 sm:px-12 lg:pr-20 pt-10 pb-0 lg:pt-0">
+        <div className="relative w-full lg:w-[48%] lg:absolute lg:right-0 lg:top-0 lg:bottom-0 bg-[#0A0A0A] flex items-end justify-center lg:justify-end px-6 sm:px-12 lg:pr-20 pt-16 pb-0 lg:pt-28 xl:pt-36">
           
-          <div className="relative w-full max-w-md lg:max-w-lg flex flex-col items-center">
+          <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-[420px] xl:max-w-[460px] flex flex-col items-center">
             
             {/* Visual Portrait Container */}
-            <div className="relative w-full aspect-[4/5] max-h-[620px] flex items-end justify-center overflow-hidden">
+            <div className="relative w-full aspect-[4/5] max-h-[480px] sm:max-h-[520px] lg:max-h-[510px] xl:max-h-[550px] flex items-end justify-center overflow-hidden">
               
               {/* Real Portrait Photo */}
               <div className="relative w-full h-full flex items-end justify-center">
@@ -98,7 +98,7 @@ export default function Hero() {
                   src="/profile-cutout.png" 
                   alt="Ramanan S"
                   onError={(e) => { e.currentTarget.src = '/profile.jpg'; }}
-                  className="w-full h-auto max-h-[600px] object-cover object-top select-none transition-transform duration-500 hover:scale-[1.02]"
+                  className="w-full h-auto max-h-[460px] sm:max-h-[500px] lg:max-h-[490px] xl:max-h-[530px] object-cover object-top select-none transition-transform duration-500 hover:scale-[1.02]"
                 />
               </div>
 
