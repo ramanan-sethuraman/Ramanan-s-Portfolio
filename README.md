@@ -83,3 +83,4 @@ To replace the vector silhouette in the Hero section with your real portrait pho
   className="w-full h-auto max-h-[580px] object-cover object-top drop-shadow-[0_20px_40px_rgba(255,255,255,0.08)]"
 />
 ```
+>>>>>>> 083e5b7 (Initial commit: Ramanan S developer portfolio built with React, Vite, and Tailwind CSS)

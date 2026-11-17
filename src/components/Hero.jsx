@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="relative w-full min-h-screen flex flex-col lg:flex-row">
         
         {/* Left Side (Light Gray with Angled Cut) */}
-        <div className="relative w-full lg:w-[58%] bg-[#E2E2E2] z-10 pt-32 pb-20 px-8 sm:px-14 lg:px-20 flex flex-col justify-center lg:[clip-path:polygon(0_0,100%_0,84%_100%,0%_100%)] shadow-2xl lg:shadow-none min-h-[550px] lg:min-h-screen">
+        <div className="relative w-full lg:w-[58%] bg-[#E2E2E2] z-10 pt-32 pb-20 px-8 sm:px-14 lg:px-20 flex flex-col justify-center lg:[clip-path:polygon(0_0,100%_0,84%_100%,0%_100%)] min-h-[550px] lg:min-h-screen">
           
           <div className="max-w-xl">
             {/* Greeting */}
@@ -92,19 +92,13 @@ export default function Hero() {
             {/* Visual Portrait Container */}
             <div className="relative w-full aspect-[4/5] max-h-[620px] flex items-end justify-center overflow-hidden">
               
-              {/* Real Portrait Photo with Edge Rim Lighting */}
+              {/* Real Portrait Photo */}
               <div className="relative w-full h-full flex items-end justify-center">
-                {/* Subtle studio rim backlight */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_55%,rgba(255,255,255,0.14),transparent_68%)] pointer-events-none"></div>
-                
                 <img 
                   src="/profile-cutout.png" 
                   alt="Ramanan S"
                   onError={(e) => { e.currentTarget.src = '/profile.jpg'; }}
-                  style={{
-                    filter: 'drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.42)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.1)) drop-shadow(0 25px 40px rgba(0, 0, 0, 0.9))'
-                  }}
-                  className="relative z-10 w-full h-auto max-h-[600px] object-cover object-top select-none transition-transform duration-500 hover:scale-[1.02]"
+                  className="w-full h-auto max-h-[600px] object-cover object-top select-none transition-transform duration-500 hover:scale-[1.02]"
                 />
               </div>
 
