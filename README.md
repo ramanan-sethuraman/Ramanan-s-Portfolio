@@ -15,7 +15,7 @@ A modern, high-contrast developer portfolio built with **React**, **Vite**, and 
 - **Interactive Portfolio Showcase:**
   - Dynamic filter tabs (`ALL`, `CODED`, `DESIGNED`).
   - Featured carousel with `| DEMO |` and `| INFO |` action buttons.
-  - Interactive project detail modal detailing architecture and features for **MeetFlow**, **Gamified Sustainable Farming (SIH 2025)**, **Vehicle Leasing & Land Utilization (IPD)**, and **Enersense AI**.
+  - Interactive project detail modal detailing architecture and features for **Tenlea** (Vehicle Leasing & Land Platform), **Enersense AI** (Energy Intelligence), **StockLedger** (Manufacturing ERP), **Respire** (Urban Heat Analytics across 200 GCC wards), **Pachil Yuva** (SIH 2025), **Uyirva** (SIH 2026), and **MeetFlow**.
 - **Experience Timeline:** Highlighting internships at **Tamizhan Skills (Cybersecurity RISE 5.0)**, **CodeAlpha (Full Stack)**, and **InternPe (AI/ML)**.
 - **Signature Contact Section:** Custom L-bracket underline input fields, `| SUBMIT |` button, `^ BACK TO TOP` smooth scroll, and footer social links.
 
